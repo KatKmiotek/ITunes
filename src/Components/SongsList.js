@@ -3,8 +3,8 @@ import React from 'react';
 
 const SongsList = (props) => {
   if (props.songs) {
-    const listOfSongs = props.songs.map((song, index) => {
-      return <li key={song.id.attributes['im:id']} value={index + 1}>
+    const listOfSongs = props.songs.map((song) => {
+      return <li key={song.id.attributes['im:id']}>
       <p>{song['im:name'].label}</p>
       <p>{song['im:artist'].label}</p>
       <img src={song['im:image'][2].label} alt='cover'/>
